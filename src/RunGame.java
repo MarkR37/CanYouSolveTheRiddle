@@ -2,13 +2,13 @@ import java.util.Scanner;
 
 public class RunGame {
 
-    private Scanner userInput = new Scanner(System.in);
+    private final Scanner userInput = new Scanner(System.in);
 
     private static final String THE_KINGS_MESSAGE =
             """
             You pass the Qualifications!
             We needed you for our current quest!
-            Your goal is to defeat the Spinx in the desert!
+            Your goal is to defeat the Sphinx in the desert!
             It is blocking the entrance to Atlantis!
             We brought together the smartest and strongest people to do it!
             Please defeat it and return to be given any wish that I the king can grant!
@@ -16,9 +16,9 @@ public class RunGame {
             Type anything to continue 'y'.
             """;
 
-    private static final String MEETING_THE_SPINX = """
+    private static final String MEETING_THE_SPHINX = """
             =========================
-            Spinx: ~)*@!#)$*!@#)!@#*
+            Sphinx: ~)*@!#)$*!@#)!@#*
             The Warlock translates:
             ~Welcome Warrior, I will ask you three questions, and if you get them all right then I will do as you say and move~
             ~If you fail, then you will die many different ways...~ 
@@ -73,11 +73,11 @@ public class RunGame {
 
     private static final String QUESTION_TWO = """
             =====================================================
-            What word in the English language does the following: 
-            the first two letters signify a male, 
-            the first three letters signify a female, 
-            the first four letters signify a great, 
-            while the entire world signifies a great woman. 
+            What word in the English language does the following:
+            the first two letters signify a male,
+            the first three letters signify a female,
+            the first four letters signify a great,
+            while the entire world signifies a great woman.
             What is the word?
             a) Heroism
             b) Heroic
@@ -85,8 +85,6 @@ public class RunGame {
             d) Heron
             =====================================================
             """;
-
-
 
     private static final String DEATH_TWO = """
             ~!)@#()!@(#)!@#(@!)#()@!(#)!(~~)!@*#)!@(*#)!@#*)!@#*()!@#*~)!@*#)!@(*#)!@#*)!@#*()!@#*~)!@*#)!@(*#)!@#*)!@#*()!@#*
@@ -130,7 +128,7 @@ public class RunGame {
     private static final String DEATH_THREE = """
             ~!)@#()!@(#)!@#(@!)#()@!(#)!(~~)!@*#)!@(*#)!@#*)!@#*()!@#*~)!@*#)!@(*#)!@#*)!@#*()!@#*~)!@*#)!@(*#)!@#*)!@#*()!@#*
             
-                    Hahahahahah I knew it, No one can beat the Great Spinx. I REVEAL MY TRAP CARD -> RICARDO MILOS
+                    Hahahahahah I knew it, No one can beat the Great Sphinx. I REVEAL MY TRAP CARD -> RICARDO MILOS
             
             ~)!@*#)!@(*#)!@#*)!@#*()!@#*~)!@*#)!@(*#)!@#*)!@#*()!@#*~)!@*#)!@(*#)!@#*)!@#*()!@#*~)!@*#)!@(*#)!@#*)!@#*()!@#*!#
             """;
@@ -147,6 +145,7 @@ public class RunGame {
     private void printQuestionThree() {
         System.out.println(QUESTION_THREE);
     }
+
     private void questionThree() {
         String x = userInput.next();
         if(x.equals("light")) {
@@ -162,6 +161,7 @@ public class RunGame {
     }
 
     private void beginningDialogue() {
+        // TODO sanitize input
         System.out.println("Hello Warrior, what is your name? ");
         userInput.next();
         System.out.println("What is your class? Warrior, Mage, Cleric, Assassin ");
@@ -177,7 +177,7 @@ public class RunGame {
     private void startingDialogue() {
         System.out.println(THE_KINGS_MESSAGE);
         enter();
-        System.out.println(MEETING_THE_SPINX);
+        System.out.println(MEETING_THE_SPHINX);
         enter();
     }
 
